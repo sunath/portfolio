@@ -1,0 +1,25 @@
+<nav class="header">
+
+
+    <div class="content">
+        <div class="mobile-view" *ngIf="isMobileResponsive">
+            <button class="navbar-toggler" (click)="onNavbarStateChange()">
+                <mat-icon>{{isMobileButtonOpened ? 'close' : 'menu'}}</mat-icon>
+              </button>
+        </div>
+    
+        <ul class="nav-list" [ngClass]="{'nav-list-hide':!showNavlinks}">
+            <li class="nav-item">
+                <a routerLink="/works" class="nav-link">Works</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/blogs" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/contacts" class="nav-link">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+
+</nav>

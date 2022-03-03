@@ -1,0 +1,70 @@
+  
+<div class="featured-contents" *ngIf="!showFeaturedWork">
+
+    <div class="title" [ngClass]="{'onWorkPage':isWorksPage}">
+        <h1>Featured Works</h1>
+    </div>
+
+    <div class="work" (click)="toggle()">
+
+        <div class="image-view">
+            <div class="img">
+                <img src="../../assets/img/dashboard2.png" alt="">
+        </div>
+        </div>
+        <div class="text-view">
+            <div class="work-title"><h1>Designing Dashboards</h1></div>
+
+            <div class="work-meta-data">
+                <div class="year">2020</div>
+                <div class="type">Dashboard</div>
+            </div>
+            <div class="content"><p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p></div>
+        </div>
+    </div>
+    <div class="bottom-line"></div>
+
+
+    <div class="work" (click)="toggle()" [ngClass]="{'hide-mobile': !isWorksPage}">
+
+        <div class="image-view">
+            <div class="img">
+                <img src="../../assets/img/vector_show.png" alt="">
+        </div>
+        </div>
+        <div class="text-view">
+            <div class="work-title"><h1>Designing Dashboards</h1></div>
+
+            <div class="work-meta-data">
+                <div class="year">2020</div>
+                <div class="type">Dashboard</div>
+            </div>
+            <div class="content"><p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p></div>
+        </div>
+    </div>
+
+
+    <div class="bottom-line"></div>
+
+
+    <div class="work" (click)="toggle()" [ngClass]="{'hide-mobile': !isWorksPage}">
+
+        <div class="image-view">
+            <div class="img">
+                <img src="../../assets/img/show_case.png" alt="">
+        </div>
+        </div>
+        <div class="text-view">
+            <div class="work-title"><h1>Designing Dashboards</h1></div>
+
+            <div class="work-meta-data">
+                <div class="year">2020</div>
+                <div class="type">Dashboard</div>
+            </div>
+            <div class="content"><p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p></div>
+        </div>
+    </div>
+</div>
+  
+<app-work *ngIf="showFeaturedWork" (onBackClick)="onBackClick($event)"></app-work>
+<app-copyright *ngIf="isWorksPage"></app-copyright>
